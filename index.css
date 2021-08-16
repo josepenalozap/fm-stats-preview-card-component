@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* typography */
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.accent-title {
+    color: hsl(277, 64%, 61%);
+}
+
+p {
+    line-height: 1.5;
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.description {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+
+
+/* Layout */
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(244, 38%, 16%);
+    width: 90%;
+    margin: 4rem auto 0;
+    border-radius: 0.5rem;
+
+}
+
+.ct-main {
+    text-align: center;
+    padding: 2em 4em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ct-image {
+    height: 200px;
+    background: url(../stats-preview-card-component-main/images/image-header-mobile.jpg), hsl(277, 64%, 61%);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    order: -1;
+
+}
+
+
+@media (min-width: 1440px) {
+
+
+    body {
+        height: 100vh;
+    }
+    main {
+        margin: 0 auto;
+        flex-direction: row;
+        width: 80%;
+    }
+    .ct-main {
+        width: 50%;
+        text-align: left;
+        padding: 4em 7.5em 4em 5em;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .ct-image {
+        width: 50%;
+        height: auto;
+        background: url(../stats-preview-card-component-main/images/image-header-desktop.jpg), hsl(277, 64%, 61%);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-size: cover;
+        order: 2;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+    }
+}
